@@ -1,0 +1,137 @@
+<!-- 
+  Website Berita Sekolah SMK Negeri 1 Cerme
+  Dibuat oleh: Kelompok 1 (Pendik, Yono, Hendra)
+  Tugas: Proyek Web Sekolah
+  
+-->
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Berita Sekolah — Kelompok 7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="narey.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SAJ</div>
+        <div>
+          <div style="font-weight:700">Sekolah Alas Juit</div>
+          <div class="muted">Berita & Kegiatan Sekolah SMK Negri 1 Cerme</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#news">Berita</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero-card fade-section"id="news">
+        <h2>Berita Sekolah Terbaru</h2>
+        <p class="muted">Informasi terkini dari kegiatan dan pengumuman di sekolah.</p>
+        <div class="news-grid">
+          <article class="card">
+            <img src="gambar e nang ig sekolah rek" alt="Upacara Bendera">
+            <h3>Upacara Bendera Hari Senin</h3>
+            <div class="meta">10 Okt 2025 • Oleh: Redaksi</div>
+            <p class="excerpt">Kegiatan rutin setiap minggu untuk menanamkan semangat nasionalisme di kalangan siswa.</p>
+            <a class="read-more" href="#">Baca Selengkapnya</a>
+          </article>
+          <article class="card">
+            <img src="delek ono " alt="Pentas Seni">
+            <h3>Pentas Seni Tahunan</h3>
+            <div class="meta">3 Okt 2025 • Oleh: OSIS</div>
+            <p class="excerpt">Acara tahunan yang menampilkan kreativitas siswa melalui tari, musik, dan drama.</p>
+            <a class="read-more" href="#">Baca Selengkapnya</a>
+          </article>
+          <article class="card">
+            <img src="kirim men foto ne nang ig ne sekolah" alt="Kegiatan Lingkungan">
+            <h3>Gerakan Peduli Lingkungan</h3>
+            <div class="meta">20 Sep 2025 • Oleh: Ekstrakurikuler Pecinta Alam</div>
+            <p class="excerpt">Siswa bekerja sama membersihkan area sekitar sekolah dan menanam pohon baru.</p>
+            <a class="read-more" href="#">Baca Selengkapnya</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="hero-card fade-section" id="galeri">
+        <h2>Galeri Foto</h2>
+        <p class="muted">Momen-momen terbaik dari kegiatan sekolah kami.</p>
+        <div class="gallery">
+          <img src="gambar/pengger1.jpg" alt="Foto 1">
+          <img src="gambar/tengah.jpg" alt="Foto 2">
+          <img src="gambar/yaya.jpg" alt="Foto 3">
+        </div>
+      </section>
+
+      <section class="hero-card fade-section" id="team">
+        <h2>Team Pembuat</h2>
+        <p class="muted">Kenali tim di balik pembuatan website berita sekolah ini.</p>
+        <div class="team-grid">
+          <div class="member">
+            <img src="gambar/ed2072cc-c933-40af-8fce-d6897c4bca24.jpg" alt="Anggota 1">
+            <h4>Tung Tung Tung kentunk</h4>
+            <p>Desain & Struktur</p>
+          </div>
+          <div class="member">
+            <img src="gambar/pengger 2.jpg" alt="Anggota 2">
+            <h4>Budi Des mode fokus</h4>
+            <p>Front-End Developer</p>
+          </div>
+          <div class="member">
+            <img src="gambar/alomani.jpg" alt="Anggota 3">
+            <h4>alomani</h4>
+            <p>Konten & Berita</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-card fade-section" id="kontak">
+        <h2>Kontak</h2>
+        <p class="muted">Hubungi kami untuk kiriman berita, foto, atau kerjasama.</p>
+        <form class="contact-form" action="mailto:info@sekolah.edu" method="post" enctype="text/plain">
+          <input type="text" name="nama" placeholder="Nama" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="judul" placeholder="Judul/Topik" required>
+          <textarea name="pesan" rows="6" placeholder="Tulis pesan..." required></textarea>
+          <button class="btn" type="submit">Kirim</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Sekolah Kita nang alas — Semua hak dilindungi
+    </footer>
+	</div>
+	<script>
+  const sections = document.querySelectorAll('.fade-section');
+
+  sections.forEach(section => section.classList.add('visible'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
