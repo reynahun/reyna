@@ -1,0 +1,269 @@
+/* 
+  File: narey.css
+  Deskripsi: Tampilan utama website Berita Sekolah SMK Negeri 1 Cerme
+  Dibuat oleh: Kelompok 7 (Pendik, Yono, Hendra)
+  
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+  color: #f2f2f2;
+  background: #0b0b0e; 
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 20, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2b9fff, #7b61ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+nav a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: rgba(43, 62, 112, 0.3);
+}
+
+
+.hero-card {
+  background: #11141b;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  margin-top: 18px;
+}
+
+.hero-card h2 {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+
+.muted {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.card {
+  background: #1b1f27;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+  font-size: 18px;
+  color: #f8fafc;
+}
+
+.meta {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.excerpt {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2b9fff, #7b61ff);
+  color: #fff;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.member {
+  background: #1b1f27;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.member h4 {
+  margin-bottom: 4px;
+  color: #f8fafc;
+}
+
+.member p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #2d3748;
+  background: #1a1d25;
+  color: #f1f5f9;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #64748b;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  margin-top: 30px;
+}
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+body {
+  background: linear-gradient(to bottom, #0b0b0e, #111, #141414);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease;
+}
+
+.container {
+  backdrop-filter: blur(2px);
+  background: rgba(40, 40, 40, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+body, .hero-card h2, .card h3, .member h4 {
+  color: #ffffff;
+}
